@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tracker</title>
+</head>
+<body onload="document.getElementsByClassName('loading')[0].style.display = 'none'">
+    <div class="loading">
+    </div>
+    <div class="container">
+        <div class="navbar">
+            <p class="title">Company name</p>
+            <div class="list">
+                <a href="#" class="link selected">Analytics</a>
+                <a href="#" class="link">About</a>
+            </div>
+        </div>
+        <div class="topbar">
+            <div class="tag">
+                <p class="tagtitle">Model :</p>
+                <div class="tagsub">Tesla c-49</div>
+            </div>
+            <div class="tag">
+                <p class="tagtitle">Vehicle number :</p>
+                <div class="tagsub">hs-763-dd</div>
+            </div>
+        </div>
+        <div class="data">
+            <div class="analytics">
+                <div class="row">
+                    <img src="./tesla.png" alt="" class="car">
+                    <div class="section">
+                        <p class="header">Range</p>
+                        <div class="bg green">
+                            <p class="sub">450 KM</p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <p class="header">KM traveled</p>
+                        <div class="bg orange">
+                            <p class="sub">73 KM</p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <p class="header">SoC (used)</p>
+                        <div class="bg blue before" style="--height: 45%">
+                            <p class="sub">45 %</p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <p class="header">SoC (last)</p>
+                        <div class="bg blue before" style="--height: 58%">
+                            <p class="sub">58 %</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fh">
+                    <!-- graphs section -->
+                    <div class="graphs">
+                        <div class="section graph">
+                            <p class="header">Speed (km/hr)</p>
+                            <div class="grpcontainer">
+                                <div class="grp">
+                                    <div class="vertical">
+                                        <p class="var">100</p>
+                                        <p class="var">80</p>
+                                        <p class="var">60</p>
+                                        <p class="var">40</p>
+                                        <p class="var">20</p>
+                                        <p class="var">0</p>
+                                    </div>
+                                    <div class="gp">
+                                        <div class="horizontal" id="graph1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section mt graph">
+                            <p class="header">AngularRateX + AngularRateY</p>
+                            <div class="grpcontainer">
+                                <div class="grp">
+                                    <div class="vertical">
+                                        <p class="var">100</p>
+                                        <p class="var">80</p>
+                                        <p class="var">60</p>
+                                        <p class="var">40</p>
+                                        <p class="var">20</p>
+                                        <p class="var">0</p>
+                                    </div>
+                                    <div class="gp">
+                                        <div class="horizontal grn" id="graph2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- extra data section -->
+                    <div class="half">
+                        <div class="hrow">
+                            <div class="section">
+                                <p class="header">Speed</p>
+                                <div class="bg green">
+                                    <p class="sub">45 KM/HR</p>
+                                </div>
+                            </div>
+                            <div class="section bars">
+                                <p class="header">Tire Pressure</p>
+                                <div class="bg">
+                                    <div class="level">
+                                        <div class="bar">
+                                            <div class="lsub">BR</div>
+                                            <div class="progress">
+                                                <div class="prgresson" style="--width:60%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cr">60</div>
+                                    </div>
+                                    <div class="level">
+                                        <div class="bar">
+                                            <div class="lsub">FR</div>
+                                            <div class="progress">
+                                                <div class="prgresson" style="--width:90%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cr">90</div>
+                                    </div>
+                                    <div class="level">
+                                        <div class="bar">
+                                            <div class="lsub">FL</div>
+                                            <div class="progress">
+                                                <div class="prgresson" style="--width:73%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cr">73</div>
+                                    </div>
+                                    <div class="level">
+                                        <div class="bar">
+                                            <div class="lsub">BL</div>
+                                            <div class="progress">
+                                                <div class="prgresson" style="--width:30%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cr">30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hrow mt">
+                            <div class="section fw">
+                                <p class="header">Distance Traveled</p>
+                                <div class="bg green">
+                                    <p class="sub">450 KM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maps">
+                <div class="map">
+                    <div class="zoomer">
+                        <div class="zm">+</div>
+                        <div class="zm">-</div>
+                    </div>
+                    <img src="./map.png" alt="" class="mapig" draggable="false">
+                </div>
+                <div class="section fw" style="height: 195px;">
+                    <p class="header">Temperature</p>
+                    <div class="circles">
+                        <div class="circle">
+                            <div class="inner">
+                                <div class="shade">
+                                    <p class="txt big" id="counter">
+                                        45
+                                    </p>
+                                    <p class="txt">
+                                        Battery
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle blue">
+                            <div class="inner blue">
+                                <div class="shade">
+                                    <p class="txt big" id="counter1">
+                                        78
+                                    </p>
+                                    <p class="txt blue">
+                                        Tire
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle">
+                            <div class="inner">
+                                <div class="shade">
+                                    <p class="txt big" id="counter2">
+                                        45
+                                    </p>
+                                    <p class="txt">
+                                        Battery
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

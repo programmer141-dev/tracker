@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background:rgb(19, 19, 19);
+    overflow: hidden;
+}
+
+.container .navbar{
+    width: 100%;
+    height: 50px;
+    background: rgb(30, 30, 30);
+    font-family:"Montserrat";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 30px;
+}
+
+.container .navbar .title{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.container .navbar .list .link{
+    text-decoration: none;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.378);
+    margin-right: 20px;
+}
+
+.container .navbar .list .link.selected{
+    color: inherit;
+}
+
+.container .data{
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+}
+
+.container .data .analytics{
+    width: 70%;
+    height: 100%;
+    padding: 30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car{
+    width: auto;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.container .data .analytics .row{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.section{
+    width: 170px;
+    height: 150px;
+    background: rgb(30, 30, 30);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Montserrat";
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgb(46, 46, 46);
+}
+
+.section .bg.before::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: var(--height);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.23);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.363);
+}
+
+.section .header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.section .bg{
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .bg .sub{
+    font-weight: 600;
+    font-size: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.container .data .analytics .fh .graphs{
+    width: 64.2%;
+    height: 100%;
+    margin-right: 7px;
+}
+
+.container .data .analytics .fh .graphs .graph{
+    width: 100%;
+}
+
+.container .data .analytics .fh .graphs .graph .grpcontainer{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.container .data .analytics .fh .graphs .graph .grpcontainer .grp{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.grp .vertical{
+    width: 30px;
+    height: 100%;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.471);
+    border-right: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.grp .gp{
+    width: calc(100% - 30px);
+}
+
+.grp .gp .li{
+    width: 100%;
+    height: calc(100% - 20px);
+}
+
+.grp .gp .horizontal {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    display: flex;
+    color: rgba(255, 255, 255, 0.471);
+}
+
+.grp .gp .horizontal .bar{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.grp .gp .horizontal .bar .b{
+    --height:20%;
+    width: 100%;
+    height: var(--height);
+    position: relative;
+}
+
+.grp .gp .horizontal .bar .b .br{
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    
+}
+
+.grp .gp .horizontal .bar .b .ball{
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.line.blu{
+    background: rgb(56, 149, 255);
+}
+.line.grn {
+    background: rgb(129, 255, 56);
+}
+
+.br.blu {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.189), transparent);
+}
+
+.br.grn {
+    background-image: linear-gradient(to bottom, rgba(77, 255, 0, 0.092), transparent);
+}
+
+.grp .gp .horizontal .bar .b .line{
+    --width:0px;
+    width: var(--width);
+    height:1.5px;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    left: 50%;
+    transform-origin: left;
+}
+
+.grp .gp .horizontal .bar .lower{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.container .data .analytics .fh .graphs .graph .grey{
+    background: transparent;
+}
+
+.container .data .analytics .fh .half{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.container .data .analytics .fh .half .hrow{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .data .maps {
+    width: 30%;
+    height: 100%;
+    padding: 30px 30px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.maps .map{
+    width: 100%;
+    height: 45%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.maps .map .zoomer{
+    width: 40px;
+    height: 80px;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.547);
+    border-radius: 5px;
+    box-shadow: -5px 5px 8px rgba(128, 128, 128, 0.425);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.maps .map .zoomer .zm{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.maps .map .zoomer .zm:last-child{
+    border-top: 1px solid rgba(128, 128, 128, 0.451);
+}
+
+.maps .map .mapig{
+    width: auto;
+    height: 100%;
+    user-select: none;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-family: "Montserrat";
+    color: #fff;
+    gap: 30px;
+}
+
+.topbar .tag{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.topbar .tag .tagtitle{
+    font-size: 13px;
+    color: rgb(231, 231, 231);
+} 
+
+.topbar .tag .tagsub{
+    font-size: 12px;
+    width: max-content;
+    height: max-content;
+    padding: 10px 15px;
+    background: rgba(0, 0, 255, 0.111);
+    border: 2px solid rgb(0, 0, 120);
+    color:rgb(145, 145, 255);
+    border-radius: 10px;
+}
+
+.mt{
+    margin-top: 20px;
+}
+.fw {
+    width: 100%;
+}
+.fh {
+    width: 100%;
+    height: calc(100% - 150px);
+    display: flex;
+}
+
+.bg.green{
+    background-image: linear-gradient(45deg, rgb(17, 83, 0), rgb(30, 140, 0));
+}
+
+.bg.blue {
+    background-image: linear-gradient(45deg, rgb(0, 4, 127), rgb(0, 82, 169));
+}
+
+.bg.orange {
+    background-image: linear-gradient(45deg, rgb(146, 63, 0), rgb(255, 102, 0));
+}
+
+.circles{
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.circles .circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid rgb(255, 255, 29);
+    margin-top: 20px;
+}
+
+.circles .circle .inner{
+    width: 110px;
+    height: 110px;
+    background-image:radial-gradient(rgb(95, 104, 0), rgb(171, 171, 0));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.circles .circle .inner.blue{
+    background-image: radial-gradient(rgb(93, 82, 255), rgb(37, 37, 255));
+}
+
+.circles .circle.blue{
+    border: 2px solid rgb(70, 92, 255);
+}
+
+.circles .circle .inner .shade .txt.blue{
+    color: rgb(208, 208, 255);
+}
+
+.circles .circle .inner .shade{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgb(30, 30, 30);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circles .circle .inner .shade .txt{
+    position: relative;
+    font-family: "Montserrat";
+    z-index: 5;
+    font-size: 12px;
+    width: max-content;
+    color: yellow;
+}
+
+.circles .circle .inner .shade .txt.big{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.circles .circle .inner .shade .txt:first-child{
+    margin-top: 25%;
+}
+
+.circles .circle .inner .shade::before{
+    content: "";
+    height: 90px;
+    width: 100px;
+    background: rgb(30, 30, 30);
+    /* background: red; */
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform:rotate(15deg);
+}
+
+.circles .circle .inner .shade::after {
+    content: "";
+    height: 90px;
+    width: 100px;
+    background: rgb(30, 30, 30);
+    /* background: red; */
+    position: absolute;
+    top: 55%;
+    left: -10%;
+    transform: rotate(-10deg);
+}
+
+.section.bars .bg{ 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.level{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.level .bar{
+    width: calc(100% - 20px);
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.level .bar .progress{
+    width: 80%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgb(19, 19, 19);
+}
+
+.level .bar .progress .prgresson{
+    width: var(--width);
+    height: 100%;
+    background: rgba(0, 181, 0, 0.442);
+    border-right: 2px solid rgb(135, 226, 0);
+    border-radius: 4px;
+}
+
+.level .bar .lsub, .cr{
+    font-size: 11px;
+    margin: 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(30, 30, 30);
+    z-index: 20;
+}
+
+.loading::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image:linear-gradient(to bottom, white 50%, transparent 50%) ;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: load 0.5s ease-in-out infinite;
+}
+
+@keyframes load {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+.loading::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background:rgb(30, 30, 30);
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1466px) {
+    .container{
+        height: max-content;
+    }
+    .data{
+        flex-direction: column;
+    }
+    .container .data .analytics{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container .data .analytics .fh .graphs{
+        width: 100%;
+    }
+    .container .data .analytics .row{
+        height: max-content;
+        flex-direction: column;
+    }
+    .fh{
+        flex-direction: column;
+        height: max-content;
+    }
+    .container .data .analytics .fh .half{
+        width: 100%;
+        height: max-content;
+        padding: 0;
+    }
+    .container .data .analytics .fh .half .hrow{
+        width: 100%;
+        height: max-content;
+        flex-direction: column;
+    }
+    .mt{
+        margin-top: 0;
+    }
+    .section{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .container .data .maps{
+        width: 100%;
+        padding: 20px;
+        padding-top: 0;
+        flex-direction: column-reverse;
+    }
+    .circles{
+        justify-content: flex-start;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .topbar{
+        gap: 24px;
+        padding: 0 20px;
+    }
+    .topbar .tag .tagtitle{
+        display: none;
+    }
+}
